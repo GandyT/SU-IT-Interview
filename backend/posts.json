@@ -1,0 +1,12 @@
+[
+	{
+		"author": "SU-IT",
+		"title": "Example Post",
+		"content": "This is an example post from the IT Department!"
+	},
+	{
+		"author": "Randy",
+		"title": "Hello World!",
+		"content": "This is a hello world post!"
+	}
+]
