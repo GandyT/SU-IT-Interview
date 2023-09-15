@@ -23,16 +23,15 @@ function App() {
 		/* EDIT HERE: get posts from server (and update frontend) */
 		/* TEMPLATE CODE: FEEL FREE TO CHANGE COMPLETELY */
 
-		/* 
 		const fetchData = async () => {
-
+			const data = (await fetch("api/getposts")).json()
+			return data;
 		}
 
 		fetchData()
 			.then(data => {
-				
+				setPosts(data.posts)
 			})
-		*/
 		
 	}, [])
 
@@ -73,6 +72,14 @@ function App() {
 		setContent("")
 
 		/* EDIT HERE: (send post to server) */
+		fetch("api/createpost", {
+			method: "POST",
+			headers: {
+				"Accept": "application/json",
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify(payload)
+		})
 	}
 
 	return (
