@@ -14,6 +14,7 @@ in the frontend.
 # Setup Instructions
 - Clone the Repository
 - Create a new branch with your first and last name. ex: "randy-sim" or "david-chen"
+- "git checkout" to branch on local machine.
 - type "npm install" within each directory.
 - run the backend first with "node ."
 - run the frontend with "npm start".
