@@ -34,7 +34,7 @@ function App() {
 		})
 	}
 
-	const onSubmit = () => {
+	const onSubmit = async () => {
 		if (!title) {
 			alert("Missing Title.");
 			return;
