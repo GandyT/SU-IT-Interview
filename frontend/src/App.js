@@ -19,7 +19,7 @@ function App() {
 	let [author, setAuthor] = useState("")
 	let [content, setContent] = useState("")
 
-	useEffect(() => {
+	useEffect(async () => {
 		/* EDIT HERE: get posts from server (and update frontend) */
 		let serverPosts = [] // fetch posts
 
