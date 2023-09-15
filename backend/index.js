@@ -1,5 +1,6 @@
 const express = require("express")
 const app = express()
+const port = 80
 
 const fs = require("fs")
 
@@ -24,4 +25,8 @@ app.post("/api/createpost", async (req, res) => {
 	Fs.writeFileSync(JSON.stringify(posts))
 
 	return res.send({ success: true })
+})
+
+app.listen(port, () => {
+	console.log(`App is listening on port ${port}`)
 })
