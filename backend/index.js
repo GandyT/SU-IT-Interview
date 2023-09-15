@@ -4,6 +4,8 @@ const port = 80
 
 const fs = require("fs")
 
+app.use(express.json())
+
 /* GET POSTS FROM SERVER */
 app.get("/api/getposts", async (req, res) => {
 	const posts = JSON.parse(fs.readFileSync("posts.json"));
@@ -22,9 +24,9 @@ app.post("/api/createpost", async (req, res) => {
 	if (!title) return res.send({ success: false, error: "Missing Title." })
 	if (!content) return res.send({ success: false, error: "Missing Content." })
 
-	let posts = JSON.parse(Fs.readFileSync("posts.json"));
+	let posts = JSON.parse(fs.readFileSync("posts.json"));
 	posts.push({ author, title, content })
-	Fs.writeFileSync(JSON.stringify(posts))
+	fs.writeFileSync("posts.json", JSON.stringify(posts))
 
 	return res.send({ success: true })
 })
