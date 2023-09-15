@@ -22,13 +22,15 @@ function App() {
 	useEffect(() => {
 		const serverPosts = [] // fetch posts
 
+		/* EDIT HERE: get posts from server (and update frontend) */
+
 		setPosts(serverPosts);
 	}, [])
 
 	const renderPosts = () => {
 		return posts.map((post, i) => {
 			return (
-				<Post key={i} title={post.title} author={post.author} content={post.content} />
+				<Post key={i} title={post.title} author={`By ${post.author}`} content={post.content} />
 			)
 		})
 	}
@@ -61,18 +63,29 @@ function App() {
 		setAuthor("")
 		setContent("")
 
-		// post to server
+		/* EDIT HERE: (send post to server) */
 	}
 
 	return (
 		<div>
-			<div>
-				<input placeholder="Title" value={title} onChange={e => setTitle(e.target.value)} />
-				<input placeholder="Author" value={author} onChange={e => setAuthor(e.target.value)} />
-				<input placeholder="Content" value={content} onChange={e => setContent(e.target.value)} />
-				<button onClick={onSubmit}>Submit</button>
+			<center>
+				<h1>POST WEBSITE</h1>
+			</center>
+			<div className="input-container">
+				<div className="input-wrapper">
+					<input className="input" placeholder="Title" value={title} onChange={e => setTitle(e.target.value)} />
+				</div>
+				<div className="input-wrapper">
+					<input className="input" placeholder="Author" value={author} onChange={e => setAuthor(e.target.value)} />
+				</div>
+				<div className="input-wrapper">
+					<input className="input" placeholder="Content" value={content} onChange={e => setContent(e.target.value)} />
+				</div>
+				<div className="input-wrapper">
+					<button className="submitButton" onClick={onSubmit}>Submit</button>
+				</div>
 			</div>
-			<div>
+			<div className="post-container">
 				{renderPosts()}
 			</div>
 		</div>

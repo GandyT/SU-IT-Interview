@@ -4,11 +4,13 @@ const port = 80
 
 const fs = require("fs")
 
+/* GET POSTS FROM SERVER */
 app.get("/api/getposts", async (req, res) => {
 	const posts = JSON.parse(fs.readFileSync("posts.json"));
 	res.json({ posts })
 });
 
+/* CREATE POST ON SERVER */
 app.post("/api/createpost", async (req, res) => {
 	const body = req.body;
 	const author = body.author;
