@@ -11,6 +11,12 @@ in the frontend.
 - fetch existing posts when the website loads
 - allow users to create their own post that will be saved in a JSON file on the "backend"
 
+# Setup Instructions
+- Clone the Repository
+- type "npm install" within each directory.
+- run the backend first with "node ."
+- run the frontend with "npm start".
+
 # Backend API
 
 /api/getposts - returns an array of posts
