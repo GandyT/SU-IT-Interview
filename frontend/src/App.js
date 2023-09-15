@@ -20,9 +20,10 @@ function App() {
 	let [content, setContent] = useState("")
 
 	useEffect(() => {
-		const serverPosts = [] // fetch posts
+		let serverPosts = [] // fetch posts
 
 		/* EDIT HERE: get posts from server (and update frontend) */
+		
 
 		setPosts(serverPosts);
 	}, [])
