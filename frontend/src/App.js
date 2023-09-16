@@ -20,20 +20,14 @@ function App() {
 	let [content, setContent] = useState("")
 
 	useEffect(() => {
-		/* EDIT HERE: get posts from server (and update frontend) */
-		/* TEMPLATE CODE: FEEL FREE TO CHANGE COMPLETELY */
-
-		/* 
+		// Fetch data from api AND cause state to update (rerender)
 		const fetchData = async () => {
-
+			const request = await fetch("http://localhost:8080/api/getposts");
+			const rjson = await request.json();
+			setPosts(rjson.posts);
 		}
 
-		fetchData()
-			.then(data => {
-				
-			})
-		*/
-		
+		fetchData();
 	}, [])
 
 	const renderPosts = () => {
@@ -44,7 +38,9 @@ function App() {
 		})
 	}
 
-	const onSubmit = async () => {
+	const onSubmit = async (e) => {
+		e.preventDefault(); // don't reload page with XHR data (legacy)
+
 		if (!title) {
 			alert("Missing Title.");
 			return;
@@ -64,6 +60,23 @@ function App() {
 			title, author, content
 		}
 
+		// Send post to server
+		const options = {
+			method: 'POST',
+			headers: {'Content-Type': 'application/json'},
+			body: JSON.stringify(payload)
+		  };
+
+		const request = await fetch('http://localhost:8080/api/createpost', options);
+		const rjson = await request.json();
+
+		// Guard-clause for server/sending error
+		if (!rjson.success){
+			console.error("API did not successfully create a post");
+			return;
+		}
+
+		// If successful,
 		// add posts to array
 		setPosts([...posts, payload]);
 
@@ -72,7 +85,6 @@ function App() {
 		setAuthor("")
 		setContent("")
 
-		/* EDIT HERE: (send post to server) */
 	}
 
 	return (
