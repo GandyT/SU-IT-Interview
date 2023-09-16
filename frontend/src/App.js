@@ -67,7 +67,7 @@ function App() {
 			body: JSON.stringify(payload)
 		  };
 
-		const request = await fetch('http://localhost:8080/api/createpost', options);
+		const request = await fetch('/api/createpost', options);
 		const rjson = await request.json();
 
 		// Guard-clause for server/sending error
