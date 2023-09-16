@@ -22,10 +22,12 @@ function App() {
 	useEffect(() => {
 		/* EDIT HERE: get posts from server (and update frontend) */
 		/* TEMPLATE CODE: FEEL FREE TO CHANGE COMPLETELY */
+		/* update the "posts" array declared on line 15 with an array of posts from the server */
+		/* api route: "http://localhost:8000/api/getposts" */
 
 		/* 
 		const fetchData = async () => {
-
+		
 		}
 
 		fetchData()
@@ -61,7 +63,8 @@ function App() {
 		}
 
 		/* EDIT HERE: (send post to server) */
-
+		/* create a post request that sends the server the "payload" variable to store a post on the server */
+		/* api route: "http://localhost:8000/api/createpost" */
 		
 
 		/* DON'T CHANGE ANYTHING BELOW HERE */

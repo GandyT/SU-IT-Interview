@@ -1,6 +1,8 @@
 # SU-IT-Interview
 - You may google anything (even StackOverflow).
 - You may download any external libraries.
+- You may ask us for help.
+- You can do ANYTHING as long as you can get it to work.
 - Please do not share interview material as it is only sabotaging yourself.
 
 # Description
@@ -24,10 +26,20 @@ in the frontend.
 
 /api/getposts - returns an array of posts
 ```js
-post = {
-    title: "post title",
-    author: "post author",
-    content: "post content"
+{
+    "posts" = [
+        {
+            "title": "post title",
+            "author": "post author",
+            "content": "post content"
+        },
+        {
+            "title": "another post title",
+            "author": "another post author",
+            "content": "another post content"
+        },
+        ...
+    ]
 }
 ```
 
