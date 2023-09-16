@@ -60,6 +60,12 @@ function App() {
 			title, author, content
 		}
 
+		/* EDIT HERE: (send post to server) */
+
+		
+
+		/* DON'T CHANGE ANYTHING BELOW HERE */
+
 		// add posts to array
 		setPosts([...posts, payload]);
 
@@ -67,8 +73,6 @@ function App() {
 		setTitle("")
 		setAuthor("")
 		setContent("")
-
-		/* EDIT HERE: (send post to server) */
 	}
 
 	return (
