@@ -29,11 +29,6 @@ function App() {
 		}
 
 		fetchData()
-			.then(data => {
-				
-			})
-		*/
-		
 	}, [])
 
 	const renderPosts = () => {
