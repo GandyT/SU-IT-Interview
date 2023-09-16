@@ -4,7 +4,10 @@ const port = 8000
 
 const fs = require("fs")
 
+const cors = require('cors')
+
 app.use(express.json())
+app.use(cors())
 
 /* GET POSTS FROM SERVER */
 app.get("/api/getposts", async (req, res) => {
