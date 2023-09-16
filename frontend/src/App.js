@@ -29,6 +29,7 @@ function App() {
 		}
 
 		fetchData()
+  		*/
 	}, [])
 
 	const renderPosts = () => {
