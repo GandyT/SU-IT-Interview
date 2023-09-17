@@ -17,12 +17,10 @@ Skip the `package-lock.json` file, as it is automatically generated (though we w
 
 # Setup Instructions
 - Clone the Repository
-- Create a new branch and automatically switch to it with your first and last name: `git checkout -b first-last` (ex: "randy-sim" or "david-chen")
 - type "npm install" within each directory.
     - at this point, it may be helpful to have 2 terminals, one for `SU-IT-Interview/frontend`, one `SU-IT-Interview/backend`)
 - run the backend first with "node ."
 - run the frontend with "npm start".
-- Once finished, push the changes you made on your branch.
 
 # Backend API
 
