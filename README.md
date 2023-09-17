@@ -7,8 +7,10 @@
 
 # Description
 The Student Union IT Department has created a website where students can post whatever they want. 
-Please connect the backend to the frontend. This will require you to examine the backend, but only write code
-in the frontend. <b>THE ONLY FILE YOU NEED TO CHANGE IS frontend/src/app.js. There will be comments in the file telling you which parts to write code in.</b>
+Please connect the backend to the frontend by using GET/POST requests. This will require you to examine the backend, but only write code
+in the frontend. **THE ONLY FILE YOU NEED TO CHANGE IS frontend/src/app.js. There will be comments in the file telling you which parts to write code in.**
+
+Skip the `package-lock.json` file, as it is automatically generated (though we will learn more about it later on in newbie ed).
 
 - fetch existing posts when the website loads
 - allow users to create their own post that will be saved in a JSON file on the "backend"
