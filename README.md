@@ -15,7 +15,7 @@ in the frontend. <b>THE ONLY FILE YOU NEED TO CHANGE IS frontend/src/app.js. The
 
 # Setup Instructions
 - Clone the Repository
-- Create a new branch and automatically switch to it with your first and last name: `git checkout -b [first-last]` (ex: "randy-sim" or "david-chen")
+- Create a new branch and automatically switch to it with your first and last name: `git checkout -b first-last` (ex: "randy-sim" or "david-chen")
 - type "npm install" within each directory. (at this point, it may be helpful to have 2 terminals, one for `SU-IT-Interview/frontend`, one `SU-IT-Interview/backend`
 - run the backend first with "node ."
 - run the frontend with "npm start".
