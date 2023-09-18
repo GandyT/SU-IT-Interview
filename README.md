@@ -2,7 +2,7 @@
 - You may google anything (even StackOverflow).
 - You may download any external libraries.
 - You may ask us for help.
-- You can do ANYTHING as long as you can get it to work.
+- You can do ANYTHING besides using ChatGPT, asking another person to do it for you remotely, etc.. 
 - Please do not share interview material as it is only sabotaging yourself.
 
 # Description
